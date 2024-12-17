@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Collapsible button styling */
+    .collapsible {
+      background-color: #777;
+      color: white;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+    }
+
+    .active, .collapsible:hover {
+      background-color: #555;
+    }
+
+    /* Hidden content styling */
+    .content {
+      padding: 0 18px;
+      display: none;
+      overflow: hidden;
+      background-color: #f1f1f1;
+    }
+
+    /* iframe styling */
+    .iframe-container {
+      margin-top: 10px;
+      text-align: center; /* Center the iframe */
+    }
+
+    iframe {
+      width: 100%;
+      height: 500px; /* Adjust the height as needed */
+      border: none; /* Removes iframe border */
+    }
+  </style>
+</head>
+<body>
+  <!-- Collapsible Section -->
+  <button class="collapsible">Open Section</button>
+  <div class="content">
+    <p>This is the collapsible content. It includes an embedded Awesome Table app:</p>
+    <div class="iframe-container">
+      <!-- Embed Awesome Table app using an iframe -->
+      <iframe 
+        src="https://view-awesome-table.com/-OEHk8lntihpRwAVQ5cT/view" 
+        title="Awesome Table App">
+      </iframe>
+    </div>
+  </div>
+
+  <!-- Script to toggle collapsible behavior -->
+  <script>
+    const coll = document.querySelectorAll('.collapsible');
+    coll.forEach(button => {
+      button.addEventListener('click', function () {
+        this.classList.toggle('active');
+        const content = this.nextElementSibling;
+        content.style.display = content.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+  </script>
+</body>
+</html>
