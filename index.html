@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Partner Information Streams - Collapsible</title>
   <style>
     /* Collapsible button styling */
     .collapsible {
@@ -14,19 +15,38 @@
       border: none;
       text-align: left;
       outline: none;
-      font-size: 18px;
+      font-size: 20px; /* Larger title font */
+      font-weight: bold; /* Bold title */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .collapsible::after {
+      content: '+';
+      font-size: 24px;
+      font-weight: bold;
+      transition: transform 0.3s ease;
+    }
+
+    .collapsible.active::after {
+      content: '−';
+      transform: rotate(0deg);
     }
 
     .active, .collapsible:hover {
       background-color: #555;
+      color: white;
     }
 
     /* Hidden content styling */
     .content {
-      padding: 0 18px;
+      padding: 10px 18px;
       display: none;
       overflow: hidden;
       background-color: #f1f1f1;
+      border: 1px solid #ddd;
+      margin-bottom: 10px;
     }
 
     /* iframe styling */
@@ -43,15 +63,40 @@
   </style>
 </head>
 <body>
-  <!-- Collapsible Section -->
+  <h1 style="text-align: center; font-family: Arial, sans-serif;">Awesome Table Apps</h1>
+
+  <!-- Collapsible Section 1 -->
   <button class="collapsible">Radical Reports</button>
   <div class="content">
     <p>Research, Analysis, and Intelligence on the Radical Right.</p>
     <div class="iframe-container">
-      <!-- Embed Awesome Table app using an iframe -->
       <iframe 
         src="https://view-awesome-table.com/-OEHk8lntihpRwAVQ5cT/view" 
         title="Radical Reports">
+      </iframe>
+    </div>
+  </div>
+
+  <!-- Collapsible Section 2 -->
+  <button class="collapsible">Secure Community Network (SCN) Daily Updates</button>
+  <div class="content">
+    <p>Daily news on threats to the Jewish community across North America.</p>
+    <div class="iframe-container">
+      <iframe 
+        src="https://view-awesome-table.com/-OEHhoork85pWXLuD_ko/view" 
+        title="Secure Community Network">
+      </iframe>
+    </div>
+  </div>
+
+  <!-- Collapsible Section 3 -->
+  <button class="collapsible">Violence Tracker</button>
+  <div class="content">
+    <p>Real-time tracking of political violence events.</p>
+    <div class="iframe-container">
+      <iframe 
+        src="https://view-awesome-table.com/-W23mN8DsadR5kX7LQ7D/view" 
+        title="Violence Tracker">
       </iframe>
     </div>
   </div>
