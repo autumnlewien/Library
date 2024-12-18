@@ -3,11 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Partner Information Streams - Collapsible</title>
+  <title>Collapsible Awesome Table Apps</title>
   <style>
     /* Collapsible button styling */
     .collapsible {
-      background-color: #FFCE50;
       color: black;
       cursor: pointer;
       padding: 18px;
@@ -20,6 +19,22 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      margin-bottom: 10px; /* Add space between buttons */
+    }
+
+    .collapsible:nth-child(4n-3), /* 1st, 3rd, etc. collapsibles */
+    .collapsible:nth-child(4n-1) { /* Alternating yellow color */
+      background-color: #FFCE50;
+    }
+
+    .collapsible:nth-child(4n-2), /* 2nd, 4th, etc. collapsibles */
+    .collapsible:nth-child(4n) { /* Alternating gray color */
+      background-color: #D3D3D3;
+    }
+
+    .collapsible.active, .collapsible:hover {
+      background-color: #555;
+      color: white;
     }
 
     .collapsible::after {
@@ -34,11 +49,6 @@
       transform: rotate(0deg);
     }
 
-    .active, .collapsible:hover {
-      background-color: #555;
-      color: white;
-    }
-
     /* Hidden content styling */
     .content {
       padding: 10px 18px;
@@ -46,7 +56,7 @@
       overflow: hidden;
       background-color: #f1f1f1;
       border: 1px solid #ddd;
-      margin-bottom: 10px;
+      margin-bottom: 10px; /* Add space between collapsibles and content */
     }
 
     /* iframe styling */
@@ -63,8 +73,6 @@
   </style>
 </head>
 <body>
-  <h1 style="text-align: center; font-family: Arial, sans-serif;">Awesome Table Apps</h1>
-
   <!-- Collapsible Section 1 -->
   <button class="collapsible">Radical Reports</button>
   <div class="content">
@@ -78,13 +86,13 @@
   </div>
 
   <!-- Collapsible Section 2 -->
-  <button class="collapsible">Secure Community Network (SCN) Daily Updates</button>
+  <button class="collapsible">Extremist Trends</button>
   <div class="content">
-    <p>Daily news on threats to the Jewish community across North America.</p>
+    <p>Insights into current extremist movements.</p>
     <div class="iframe-container">
       <iframe 
-        src="https://view-awesome-table.com/-OEHhoork85pWXLuD_ko/view" 
-        title="Secure Community Network">
+        src="https://view-awesome-table.com/-Nw6Ag0wDFi7CkCvpEDg/view" 
+        title="Extremist Trends">
       </iframe>
     </div>
   </div>
